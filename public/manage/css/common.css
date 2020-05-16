@@ -99,7 +99,10 @@ a:active {
   font-size: 18px;
 }
 .lt-main .container-fluid {
-  padding-top: 60px;
+  box-sizing: border-box;
+}
+.lt-main .container-fluid .content {
+  padding: 60px 10px 10px 10px;
 }
 body.toggle .lt-aside {
   left: -180px;
