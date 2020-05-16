@@ -4,6 +4,19 @@
 ul {
   list-style: none;
 }
+*{
+  padding: 0;
+  margin: 0;
+}
+a,
+a:hover,
+a:link,
+a:visited,
+a:active{
+  text-decoration: none;
+  color: #ccc;
+}
+// ---
 .mt_150 {
   margin-top: 150px;
 }
@@ -14,4 +27,104 @@ ul {
   height: 40px;
   line-height: 40px;
   font-size: 20px;
+}
+// lt-aside
+.lt-aside{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  background-color: #222D32;
+  height: 100%;
+  z-index: 2;
+  transition: left .5s;
+  .brand {
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    background-color: #367FA9;
+  }
+  .user {
+    text-align: center;
+    padding-top: 30px;
+    height: 180px;
+    img{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+    p{
+      font-size: 18px;
+      line-height: 40px;
+      color: #fff;
+    }
+  }
+  .nav{
+    // text-alixn: center;
+    ul{
+      li{
+        a{
+          padding-left: 40px;
+          color: #fff;
+          font-size: 14px;
+          height: 40px;
+          width: 180px;
+          display: block;
+          line-height: 40px;
+          &.current{
+            background-color: #1D1F21;
+            border-left: 3px solid #006699;
+          }
+        }
+        ul{
+          // display: none;
+          li {
+            a{
+              padding-left: 55px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.lt-main{
+  padding-left: 180px;
+  transition: left .5s;
+  .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    padding-left: 180px;
+    background-color: #3C8DBC;
+    transition: padding-left .5s;
+    a{
+      height: 50px;
+      text-align: center;
+      padding: 0 20px;
+      line-height: 50px;
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+  .container-fluid{
+    padding-top: 60px;
+  }
+}
+// 切换侧边栏样式
+body.toggle {
+  .lt-aside {
+    left: -180px;
+  }
+  .lt-main .nav {
+    padding-left: 0;
+  }
+  .lt-main {
+    padding-left: 0;
+  }
+
 }

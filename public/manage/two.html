@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body>
+  <div class="lt-aside">
+    <div class="brand">飞天喜欢你</div>
+    <div class="user">
+      <img src="./images/default.png" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="user.html">
+            <span class="glyphicon glyphicon-user"></span>
+            用户管理
+          </a>
+        </li>
+        <li>
+          <a href="javascript:;" class="category">
+            <span class="glyphicon glyphicon-list"></span>
+            分类管理
+          </a>
+          <ul class="second">
+            <li><a href="one.html">一级分类</a></li>
+            <li><a href="two.html" class="current">二级分类</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="product.html">
+            <span class="glyphicon glyphicon-tags"></span>
+            商品管理
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="lt-main">
+    <div class="nav">
+      <a href="#" class="pull-left icon_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+      <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-out"></span></a>
+    </div>
+    <div class="container-fluid">
+      <!-- 模态框 -->
+      <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+              <p>您确定要离开我吗？</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary btn-logout">退出</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </div>
+  </div>
+  
+  <script src="./lib/jquery.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./js/isLogin.js"></script>
+  <script src="./js/common.js"></script>
+</body>
+
+</html>

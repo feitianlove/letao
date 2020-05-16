@@ -4,6 +4,18 @@
 ul {
   list-style: none;
 }
+* {
+  padding: 0;
+  margin: 0;
+}
+a,
+a:hover,
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #ccc;
+}
 .mt_150 {
   margin-top: 150px;
 }
@@ -14,4 +26,87 @@ ul {
   height: 40px;
   line-height: 40px;
   font-size: 20px;
+}
+.lt-aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  background-color: #222D32;
+  height: 100%;
+  z-index: 2;
+  transition: left 0.5s;
+}
+.lt-aside .brand {
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  background-color: #367FA9;
+}
+.lt-aside .user {
+  text-align: center;
+  padding-top: 30px;
+  height: 180px;
+}
+.lt-aside .user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.lt-aside .user p {
+  font-size: 18px;
+  line-height: 40px;
+  color: #fff;
+}
+.lt-aside .nav ul li a {
+  padding-left: 40px;
+  color: #fff;
+  font-size: 14px;
+  height: 40px;
+  width: 180px;
+  display: block;
+  line-height: 40px;
+}
+.lt-aside .nav ul li a.current {
+  background-color: #1D1F21;
+  border-left: 3px solid #006699;
+}
+.lt-aside .nav ul li ul li a {
+  padding-left: 55px;
+}
+.lt-main {
+  padding-left: 180px;
+  transition: left 0.5s;
+}
+.lt-main .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  padding-left: 180px;
+  background-color: #3C8DBC;
+  transition: padding-left 0.5s;
+}
+.lt-main .nav a {
+  height: 50px;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;
+}
+.lt-main .container-fluid {
+  padding-top: 60px;
+}
+body.toggle .lt-aside {
+  left: -180px;
+}
+body.toggle .lt-main .nav {
+  padding-left: 0;
+}
+body.toggle .lt-main {
+  padding-left: 0;
 }
