@@ -11,7 +11,7 @@ $(document).ajaxStart(function(){
 $(document).ajaxStop(function(){
   setTimeout(function(){
     NProgress.done()
-  },10000)
+  },500)
 })
 // 后台首页index.js，二级菜单显示
 $('.category').on('click',function(){

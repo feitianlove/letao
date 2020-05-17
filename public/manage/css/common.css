@@ -113,3 +113,12 @@ body.toggle .lt-main .nav {
 body.toggle .lt-main {
   padding-left: 0;
 }
+.user table tr {
+  text-align: center;
+}
+.user table tr th {
+  text-align: center;
+}
+.user table tr td {
+  vertical-align: middle;
+}

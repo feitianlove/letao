@@ -49,10 +49,11 @@
   <div class="lt-main">
     <div class="nav">
       <a href="#" class="pull-left icon_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
-      <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-out"></span></a>
+      <a href="#" class="pull-right" data-toggle="modal" data-target="#myModal"><span
+          class="glyphicon glyphicon-log-out"></span></a>
     </div>
     <div class="container-fluid">
-      <!-- 模态框 -->
+      <!-- 退出登陆模态框 -->
       <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog modal-sm" role="document">
           <div class="modal-content">
@@ -71,22 +72,81 @@
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
-      <div class="content">
-          <!-- 路径导航 -->
-          <ol class="breadcrumb">
-            <li><a href="#">后台管理</a></li>
-            <li class="active">用户管理</li>
-          </ol>
+      <div class="content user">
+        <!-- 路径导航 -->
+        <ol class="breadcrumb">
+          <li><a href="#">后台管理</a></li>
+          <li class="active">用户管理</li>
+        </ol>
+        <!-- 表格 -->
+        <div>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>序号</th>
+                <th>用户名</th>
+                <th>手机号</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody class="userData">
+            </tbody>
+          </table>
+        </div>
+        <!-- 分页 -->
+        <div class="pagenation pull-right">
+          <ul id="pagintor"></ul>
+        </div>
+        <!-- 启用禁用模态框 -->
+        <div class="modal fade" tabindex="-1" id="qjy">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+              </div>
+              <div class="modal-body">
+                <p>您确定要做此操作吗?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary btm-submit">确定</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
       </div>
     </div>
   </div>
-  
+  <!-- 用户数据模版 -->
+  <script type="text/template" id="userTemplate">
+    {{ each rows item i}}
+    <tr>
+      <td>{{ (page-1)*size + i + 1}}</td>
+      <td>{{ item.username }}</td>
+      <td>{{ item.mobile }}</td>
+      <td>{{ item.isDelete == 1 ? '已启用' : '已禁用' }}</td>
+      <td data-id={{ item.id }}> 
+        {{ if item.isDelete == 1}}
+          <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#qjy" >禁用</button>
+        {{ else }}
+          <button class="btn btn-success" type="submit" data-toggle="modal" data-target="#qjy">禁用</button>
+        {{/if}}
+      </td>
+    </tr>
+    {{ /each }}
+ </script>
   <script src="./lib/jquery.js"></script>
   <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="./lib/nprogress/nprogress.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
   <script src="./js/isLogin.js"></script>
   <script src="./js/common.js"></script>
+  <script src="./js/user.js"></script>
 </body>
 
 </html>
