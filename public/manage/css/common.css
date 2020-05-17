@@ -22,6 +22,9 @@ a:active {
 .mb_20 {
   margin-bottom: 20px;
 }
+.mt_20 {
+  margin-top: 20px;
+}
 .panel-title {
   height: 40px;
   line-height: 40px;
@@ -113,12 +116,18 @@ body.toggle .lt-main .nav {
 body.toggle .lt-main {
   padding-left: 0;
 }
-.user table tr {
+.user table tr,
+.categroy1 table tr,
+.categroy2 table tr {
   text-align: center;
 }
-.user table tr th {
+.user table tr th,
+.categroy1 table tr th,
+.categroy2 table tr th {
   text-align: center;
 }
-.user table tr td {
+.user table tr td,
+.categroy1 table tr td,
+.categroy2 table tr td {
   vertical-align: middle;
 }
