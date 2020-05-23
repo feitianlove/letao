@@ -118,16 +118,19 @@ body.toggle .lt-main {
 }
 .user table tr,
 .categroy1 table tr,
-.categroy2 table tr {
+.categroy2 table tr,
+.product table tr {
   text-align: center;
 }
 .user table tr th,
 .categroy1 table tr th,
-.categroy2 table tr th {
+.categroy2 table tr th,
+.product table tr th {
   text-align: center;
 }
 .user table tr td,
 .categroy1 table tr td,
-.categroy2 table tr td {
+.categroy2 table tr td,
+.product table tr td {
   vertical-align: middle;
 }
