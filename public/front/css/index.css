@@ -1,0 +1,44 @@
+.lt-main .lt-nav {
+  padding: 10px;
+}
+.lt-main .lt-nav li {
+  float: left;
+  width: 33.33%;
+}
+.lt-main .lt-nav li img {
+  width: 100%;
+}
+.lt-main .lt-product {
+  padding: 10px;
+}
+.lt-main .lt-product .item {
+  float: left;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+.lt-main .lt-product .item a {
+  text-align: center;
+  display: block;
+}
+.lt-main .lt-product .item a img {
+  width: 100%;
+}
+.lt-main .lt-product .item a p {
+  font-size: 14px;
+  columns: #ccc;
+  text-align: center;
+}
+.lt-main .lt-product .item a .price {
+  margin-bottom: 10px;
+}
+.lt-main .lt-product .item a .price span:nth-child(1) {
+  font-size: 14px;
+  color: red;
+}
+.lt-main .lt-product .item a .price span:nth-child(2) {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: line-through;
+}

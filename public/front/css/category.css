@@ -1,0 +1,39 @@
+.lt-nav {
+  float: left;
+  width: 90px;
+  height: 100%;
+  overflow: hidden;
+}
+.lt-nav .mui-scroll-wrapper {
+  width: 90px;
+}
+.lt-nav ul {
+  width: 100%;
+}
+.lt-nav ul li {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+  text-align: center;
+  line-height: 50px;
+}
+.lt-nav ul li.active {
+  border-right: none;
+}
+.lt-content {
+  overflow: hidden;
+  height: 2000px;
+}
+.lt-content ul li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.lt-content ul li a {
+  display: block;
+  width: 100%;
+}
+.lt-content ul li a img {
+  width: 70%;
+}

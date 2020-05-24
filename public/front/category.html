@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+  <div class="lt-layout">
+    <div class="lt-header">
+      <a href="" class="mui-icon mui-icon-home"></a>
+      <h4>分类</h4>
+      <a href="./search.html" class="mui-icon mui-icon-search"></a>
+    </div>
+    <div class="lt-main">
+      <div class="lt-nav">
+        <div class="mui-scroll-wrapper">
+          <div class="mui-scrolls">
+            <ul>
+              <li><a href="#">熊猫馆</a></li>
+              <li class="active"><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+              <li><a href="#">熊猫馆</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="lt-content">
+        <ul>
+          <li>
+            <a href="">
+              <img src="./image/brand1.png" alt="">
+              <p>耐克</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./image/brand1.png" alt="">
+              <p>耐克</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./image/brand1.png" alt="">
+              <p>耐克</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="lt-footer">
+      <ul>
+        <li><a href="./index.html"><span class="mui-icon mui-icon-home"></span><span>首页</span></a></li>
+        <li><a href="./category.html" class="active"><span class="mui-icon mui-icon-bars"></span><span>分类</span></a></li>
+        <li><a href="./category.html"><span class="mui-icon mui-icon-star"></span><span>购物车</span></a></li>
+        <li><a href="./user.html"><span class="mui-icon mui-icon-contact"></span><span>用户中心</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- 一级分离 -->
+  <script type="text/template" id="category-1">
+    {{ each rows item index }}
+      {{if index == 0 }}
+        <li data-id={{ item.id }} class="active"><a href="#">{{ item.categoryName }}</a></li>
+      {{else}}
+        <li data-id={{ item.id }}><a href="#">{{ item.categoryName }}</a></li>
+      {{/if}}
+    {{ /each }}
+  </script>
+  <script type="text/template" id="category-2">
+    {{ each rows item index }}
+    <li data-id={{ item.id }}>
+      <a href="">
+        <img src="{{ item.brandLogo }}" alt="">
+        <p>{{ item.brandName }}</p>
+      </a>
+    </li>
+    {{ /each }}
+  </script>
+  <script src="./lib/mui/js/mui.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./js/comm.js"></script>
+  <script src="./js/category.js"></script>
+</body>
+
+</html>
